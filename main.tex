@@ -1,10 +1,58 @@
-\documentclass{article}
+\documentclass[a4paper,11pt,oneside,brazilian,
+draft=false]{article}%openany,version=last
 
-\begin{document}
+
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{mybook}
+\usepackage{fancyhdr}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage[toc,page]{appendix}
+
+\pdfcompresslevel = 9
+\oddsidemargin = 31pt
+\topmargin = 20pt
+\headheight = 12pt
+\headsep = 25pt
+\textheight = 592pt
+\textwidth = 390pt
+\marginparsep = 10pt
+\marginparwidth = 35pt
+\footskip = 30pt
+
+\begin{document} 
+
+\includepdf{capas/capa_main.pdf}
+\include{frontpage}
+\include{header}
 
 
-\section{Title}
 
+\section{Resumo do projeto}
+
+\section{Artigo CITENEL}
+\includepdf{PDFs/citenel.pdf}
+\section{Artigo GDF Suez Innovation}
+
+\section{Viagens}
+
+\section{Publicações e imprensa}
+
+\section{Manual do usuário}
+
+\section{Projeto básico}
+
+\section{Relatório elétrica e eletrônica}
+
+\section{Relatório usabilidade}
+
+\section{Proposta de mestrado André}
+
+\section{Proposta de mestrado Gabriel}
+
+\section{Proposta de mestrado Elael} 
 
 
 \end{document}
