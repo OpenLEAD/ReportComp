@@ -10,6 +10,9 @@ draft=false]{report}%openany,version=last
 \usepackage{pdflscape}
 \usepackage{pdfpages}
 \usepackage[toc,page]{appendix}
+\usepackage{titlesec}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
 \pdfcompresslevel = 9
@@ -24,31 +27,59 @@ draft=false]{report}%openany,version=last
 \footskip = 30pt
 \pagenumbering{gobble}
 
+\titleformat{\chapter} % command
+[block] % shape
+{\bfseries\Large\itshape} % format
+{	\textsc{\LARGE Compilação de relatórios técnicos} 
+	\newline \newline  
+	\textsc{\Large Capítulo \ \thechapter}} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{2pt}
+    \vspace{1ex}
+    \centering
+    \huge \bfseries
+} % before-code
+[
+\centering
+\vspace{-1ex}%
+\rule{\textwidth}{2pt}
+{\large \today}
+\newline
+\includegraphics{logo/rosa_logo.png}
+\vfill
+] % after-code
+
 \begin{document} 
 
 
 \includepdf{capas/capa_main.pdf}
 \include{frontpage}
 
-\include{chapter1}
-\include{resumo}
+\tableofcontents
+
+\chapter{Resumo de projeto}
+\include{chapter1}\addcontentsline{toc}{chapter}{Resumo de projeto}
+\include{resumo} 
 
 \include{chapter2} 
 \includepdf[pages=-]{PDFs/citenel.pdf}
 
+
 \include{chapter3}
 \includepdf[pages=-]{PDFs/GDF.pdf}
-%\section{Artigo GDF Suez Innovation}
 
 %\section{Viagens}
 
 %\section{Publicações e imprensa}
 
-%\section{Manual do usuário}
+\include{chapter6}
+\includepdf[pages=-]{PDFs/UserGuide.pdf}
 
 %\section{Projeto básico}
 
-%\section{Relatório elétrica e eletrônica}
+\include{chapter8}
+\includepdf[pages=3-]{PDFs/RelEle.pdf}
 
 %\section{Relatório usabilidade}
 
@@ -57,8 +88,5 @@ draft=false]{report}%openany,version=last
 %\section{Proposta de mestrado Gabriel}
 
 %\section{Proposta de mestrado Elael} 
-
-
-
 
 \end{document}
