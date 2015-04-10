@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt,oneside,brazilian,
-draft=false]{article}%openany,version=last
+draft=false]{report}%openany,version=last
 
 
 \usepackage{float}
@@ -10,6 +10,7 @@ draft=false]{article}%openany,version=last
 \usepackage{pdflscape}
 \usepackage{pdfpages}
 \usepackage[toc,page]{appendix}
+
 
 \pdfcompresslevel = 9
 \oddsidemargin = 31pt
@@ -24,35 +25,38 @@ draft=false]{article}%openany,version=last
 
 \begin{document} 
 
+
 \includepdf{capas/capa_main.pdf}
 \include{frontpage}
-\include{header}
+%\include{header}
 
 
 
-\section{Resumo do projeto}
+%chapter{Resumo do projeto}
 
-\section{Artigo CITENEL}
-\includepdf{PDFs/citenel.pdf}
-\section{Artigo GDF Suez Innovation}
+\include{title}
+\includepdf[pages=-]{PDFs/citenel.pdf}
+%\section{Artigo GDF Suez Innovation}
 
-\section{Viagens}
+%\section{Viagens}
 
-\section{Publicações e imprensa}
+%\section{Publicações e imprensa}
 
-\section{Manual do usuário}
+%\section{Manual do usuário}
 
-\section{Projeto básico}
+%\section{Projeto básico}
 
-\section{Relatório elétrica e eletrônica}
+%\section{Relatório elétrica e eletrônica}
 
-\section{Relatório usabilidade}
+%\section{Relatório usabilidade}
 
-\section{Proposta de mestrado André}
+%\section{Proposta de mestrado André}
 
-\section{Proposta de mestrado Gabriel}
+%\section{Proposta de mestrado Gabriel}
 
-\section{Proposta de mestrado Elael} 
+%\section{Proposta de mestrado Elael} 
+
+
 
 
 \end{document}
