@@ -1,1 +1,150 @@
 %TODO
+\chapter*{Contextualização}
+Visando um aumento na segurança e otimização das operações realizadas na usina 
+hidrelétrica de Jiray (3,750 MW Brasil), ESBR estabelceu uma parceria com a 
+Universidade Federal do Rio de Janeiro para o desenvolvimento de um projeto de 
+inovação de um robô submarino para monitoração e mapeamento (ROSA), para auxiliar
+nas operações de manutenção de \textit{stoplogs}. O projeto ROSA teve início em
+2013 e seu término ocorreu Fevereiro de 2015, totalizando um investimento de
+R\$ 2.8 milhões.
+
+\textit{Stoplogs} do barreiras metálicas modulares que são empilhadas na entrada
+e sáida da tubina, permitindo o seu vedamento e a drenagem da região para
+manutenção. Em Jirau, cada \textit{stoplog} pesa aproximadamente duas toneladas
+e é necessário o empilhamento de 8 \texit{stoplogs} em cada extremidade da turbina
+pra o seu selamento.
+
+Um operador instala e remove os \textir{stoplogs}, utilizando um pórtico
+rolante. Atualmente, a única informação disponível sobre o status da operação,
+aṕos a completa submersão do \textit{stoplog}, é a tensão do cabo. Essa operação
+''ás cegas'' resulta, ocasionalmente, em falhas causadas por influências
+mecânicas ou ambientais. Alguns exemplos são:
+
+\begin{itemize}
+  \item O acoplamento correto em somente um dos olhais do \textir{stoplog},
+  resultando em uma movimentação inclinada e danificando a estrutura;
+  \item Detritos e sedimentos acumulados na soleira, acarretando em um selamento
+  imperfeito e, consequentemente, impossibilitando uma drenagem efetiva
+\end{itemize}
+
+Falhas na operação podem ser resolvidas somentras por meio da intervenção de
+mergulhadores. As turbinas adjacentes em operação e o turbilhamento do rio podem
+ocasionar em acidentes, tornando essa medida uma tarefa de alto risco à vida dos
+mergulhadores.
+
+\chapter*{Revisão Bibiliográfica}
+
+No estudo de Lewin(1995) sobre as propriedades físicas e mecânicas de 
+\textit{stoplogs} e viga pescadoras, o autor afirma em seu livro que o
+\textit{stoplog} ideal possuira um sensor de contato e uma válvula reguladora da
+pressão hidrostática, o que resolveria a maioria dos problemas apresentados
+nesse tipo de operação. Entretanto, em Group (2006), Inglaterra, foi proposto
+uma norma técnica para a produção de \textit{stoplogs} sem o sensoriamento
+previamente citado, devido aos altos custos de implementação e manutenção. Em
+2006, Hatch, uma consultoria de engenharia e desevolvimento, desenvolveu um
+sistema comporto por uma viga pescadora instrumentada com sensores de
+proximidade e servomotores elétricos submersíveis para atuar idependentemente em
+cada garra. Em 2007, o sistema foi instalado na represa do Lago Ivanhoe,
+reduzindo consideravelmente a necessidade de intervenção manual e aumentando,
+assim, a segurança da operação (Hatch,2009).
+
+Analogamente, a Atlas Polar automatiza o processo de instalação de
+stoplogs, o sistema é consiste na utilização de um sensor indutivo para a
+leitura do contato com o \textit{stoplog} e um sensor de força, do tipo
+\textit{stain gauge}, para indicar a liberação ou levantamento de
+\textit{stoplogs} (Polar,2015).
+
+Nenhuma das soluções presentes na literatura são viáveis comercialmente para o
+contexto da usina de Jirau. As soluções propostas requerem a aquisição de todo o
+sistema composto por pórtico rolante e viga-pescadora para a integração dos
+sensores de carga, em vez de se alterar a infraestrutura existente. Não foi
+encontrado nenhum trabalho anterior referenciando a utilização de sonares para a
+inspeção dos trilhos guia e da soleira da entrada e saída da turbina.
+
+\chapter{Aspecto inovador do projeto}
+
+O desenvolvimento de um sistema robótico submarino capaz de mapear e monitorar
+operações com \textit{stoplogs}, resultando em um ganho econômico, por meio da
+redução das paradas na produção, e aumento da segurança da operação,
+reduzinho a necessidade da intervenção de mergulhadores.
+
+\chapter{Descrição da inovação}
+
+O robô de monitoramento e mapeamento submarino (ROSA) é projetado para evitar a
+maioria dos problemas relacionados à operações com \textit{stoplogs}. O sistema
+submarino realiza a monitoração em tempo real, processando e apresentando os
+dados diretamente em um tablet instalado na cabine do operador. Algoritmos de
+controle ''inteligentes'' auxiliam o operador no processo de tomada de decisão,
+por meio de alarmes indicando falhas na operação.
+
+O sistema consiste em uma eletrônica submarina embarcada desenvolvida
+exclusivamente para o projeto, que se comunica com os sensores integrados à
+viga. As medidas realizadas pelo sensor são transmitidas para a
+eletrônica em terra através de um umbilical e, após o processamento, são
+transmitida via Wi-Fi para o tablet com o operador.
+
+O conjunto de sensores responsáveis pelo monitoramentos é constituído por
+sensores de inclinação, profundidade e proximidade. Cada etapa do processo pesca
+e retirada dos \textit{stoplogs} é, então, monitorado.
+
+O sistema de mapeamento é constituído por um sensor sonar acoplado a um unidade
+pan e tilt. A informação aquisitada pelo sonar é apresentada ao operador
+sobreposta a um modelo 3D da estrutura submersa, possibilitando uma visualização
+intuitiva dos sedimentos.
+
+%TODO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Multiple sound waves emitted by the sonar are modeled probabilistically in 
+ 3D according to the potency, the eco response is than store in a 3D probabilistic 
+ grid map and finally fused through a particle filter to estimate the most probable map.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+O projeto acrescenta uma inovação para o processo atual, no qual a operação é
+realizado ''às cegas''. A solução é aplicável a qualquer usina que utilize um
+sistema de \textit{stoplogs} baseado em pórtico rolante e viga-pescadora.
+
+
+\chapter{Aplicabilidade}
+
+The end result is a prototype: water tight surface unit with IP68 rating level, 
+capable of withstanding high temperature and humidity, a IP69K rating subsea unit 
+capable of withstanding up to 100 bar of pressure. The system is currently 
+deployed and in use at Jirau.
+	The prototype was demonstrated to Jirau and Santo Antonio in real Stoplog 
+	operation. The monitoring payload worked as designed signaling all operation 
+	steps, raising alarms for detected operational failures. The mapping payload 
+	also worked as intended with a detection threshold for debris larger than 20cm. 
+	ESBR and Santo Antonio showed interested in the continuation of the innovation 
+	chain of the project. The monitoring payload is to be optimized cost wise 
+	and installed permanently one in each Viga Pescadora, totalizing between 
+	both power plants 21 Units. The mapping payload is to be extended in capability 
+	to be able to map cavitation of the concrete walls. 
+\chapter{Relevância}
+The economical gain of the ROSA system can be estimated by the amount of Stoplog 
+operational issues that would have been avoided in case the system was in daily 
+use in Jirau powerplant. In Jirau, over a period of 2 years, stoplog faults resulted 
+in a production availability loss (Aumento da Energia Disponível) of 37 days.
+ Each turbine in Jirau produces 75 MWh, considering, the energy price in the free 
+ market in Brazil of approximately 186,00 per MWh this would signify a possible 
+ extra revenue of R\$12.358.238,04. 
+	The gain in work safety of the ROSA can be estimated by the reduction of number 
+	of interventional dives. The level of risk of this task in HSE is classified as 
+	Major, since it represent a real risk of lost of a human life. The following 
+	incident took place with an interventional dive in Jirau, 2014. A diver was 
+	dragged to an adjacent inlet, the security rope held him initially, but the 
+	water pressure was too high making breathing and moving back impossible. He 
+	had to cut the rope and allow himself to be dragged through the system 
+downriver. Luckily, the accident was not fatal. 
+	Stoplog issues represented approximately 25 days of interventional dives 
+	this past 2 years. Since, the downtime in production is related to the time 
+	necessary to mobilize the divers, dive and resolve the issues. The ROSA system
+	 is a monitoring and inspection system, helping the operator to reduce the 
+	 occurrence of faults and completely avoid aggravating actions of operating 
+	 under faulty condition. Considering the list of stop log occurrences, 
+	 detailed in the attached document, the use of the ROSA would have resulted 
+	 in a reduction of 75% in exposure to risk. 
+	O projeto, apesar de curta duracao (16 meses), resultou em 3 teses de 
+	mestrado, uma publicação técnica submetida ao CITENEL 2015, um artigo técnico 
+	em inglês submetido ao prêmio GDF Suez de inovação, e 6 publicações na imprensa: 
+ 
+
+
