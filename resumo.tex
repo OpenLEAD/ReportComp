@@ -90,13 +90,11 @@ e retirada dos \textit{stoplogs} é, então, monitorado.
 O sistema de mapeamento é constituído por um sensor sonar acoplado a um unidade
 pan e tilt. A informação aquisitada pelo sonar é apresentada ao operador
 sobreposta a um modelo 3D da estrutura submersa, possibilitando uma visualização
-intuitiva dos sedimentos.
-
-%TODO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  Multiple sound waves emitted by the sonar are modeled probabilistically in 
- 3D according to the potency, the eco response is than store in a 3D probabilistic 
- grid map and finally fused through a particle filter to estimate the most probable map.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+intuitiva dos sedimentos. As ondas sonoras emitidas e recebidas pelo sonar são
+processadas probabilisticamente, e de acordo com a potência e tempo de resposta
+do eco recebido, essas informações são inseridas em um mapa 3D de ocupância
+probabilística e por meio de um filtro de partículas, o resultado mais provável
+é estimado.
 
 O projeto acrescenta uma inovação para o processo atual, no qual a operação é
 realizado ''às cegas''. A solução é aplicável a qualquer usina que utilize um
@@ -105,46 +103,59 @@ sistema de \textit{stoplogs} baseado em pórtico rolante e viga-pescadora.
 
 \chapter{Aplicabilidade}
 
-The end result is a prototype: water tight surface unit with IP68 rating level, 
-capable of withstanding high temperature and humidity, a IP69K rating subsea unit 
-capable of withstanding up to 100 bar of pressure. The system is currently 
-deployed and in use at Jirau.
-	The prototype was demonstrated to Jirau and Santo Antonio in real Stoplog 
-	operation. The monitoring payload worked as designed signaling all operation 
-	steps, raising alarms for detected operational failures. The mapping payload 
-	also worked as intended with a detection threshold for debris larger than 20cm. 
-	ESBR and Santo Antonio showed interested in the continuation of the innovation 
-	chain of the project. The monitoring payload is to be optimized cost wise 
-	and installed permanently one in each Viga Pescadora, totalizing between 
-	both power plants 21 Units. The mapping payload is to be extended in capability 
-	to be able to map cavitation of the concrete walls. 
+O resultado final do projeto foi um protótipo consistindo de: uma unidade de
+superfície à prova d'água, certificada com IP68, capaz de suportar umidade e
+altas temperaturas e uma unidade submarina, certificada com IP69K, capaz de
+suportar até 100 bar de pressão. O sistema está, atualmente, instalado e sendo
+utilizado na usina de Jirau.
+
+O protótipo foi demonstrado para os representantes das usinas de Jirau e Santo
+Antônio em uma operação real com \textit{stoplogs}. A tarefa de monitoração foi
+realizada com sucesso, indicando todos os passos de uma operação e emitindo
+alarmes para as falhas detectadas. O mapeamento também foi bem sucedido,
+detectando detritos maiores que 20cm. ESBR e Santo Antônio demostraram interesse
+na continuação de projetos de inovação na mesma frente de pesquisa. O
+equipamento de monitoração deve ter seu custo de implementação otimizado e
+deverá ser instalado permanentemente em cada viga pescadora, totalizando, entre
+ambas as usinas, 21 unidades. A unidade de mapeamento deve ter sua capacidade
+extendida para poder mapear os danos causados pela cavitação nas paredes de
+concreto.
+ 
 \chapter{Relevância}
-The economical gain of the ROSA system can be estimated by the amount of Stoplog 
-operational issues that would have been avoided in case the system was in daily 
-use in Jirau powerplant. In Jirau, over a period of 2 years, stoplog faults resulted 
-in a production availability loss (Aumento da Energia Disponível) of 37 days.
- Each turbine in Jirau produces 75 MWh, considering, the energy price in the free 
- market in Brazil of approximately 186,00 per MWh this would signify a possible 
- extra revenue of R\$12.358.238,04. 
-	The gain in work safety of the ROSA can be estimated by the reduction of number 
-	of interventional dives. The level of risk of this task in HSE is classified as 
-	Major, since it represent a real risk of lost of a human life. The following 
-	incident took place with an interventional dive in Jirau, 2014. A diver was 
-	dragged to an adjacent inlet, the security rope held him initially, but the 
-	water pressure was too high making breathing and moving back impossible. He 
-	had to cut the rope and allow himself to be dragged through the system 
-downriver. Luckily, the accident was not fatal. 
-	Stoplog issues represented approximately 25 days of interventional dives 
-	this past 2 years. Since, the downtime in production is related to the time 
-	necessary to mobilize the divers, dive and resolve the issues. The ROSA system
-	 is a monitoring and inspection system, helping the operator to reduce the 
-	 occurrence of faults and completely avoid aggravating actions of operating 
-	 under faulty condition. Considering the list of stop log occurrences, 
-	 detailed in the attached document, the use of the ROSA would have resulted 
-	 in a reduction of 75% in exposure to risk. 
-	O projeto, apesar de curta duracao (16 meses), resultou em 3 teses de 
-	mestrado, uma publicação técnica submetida ao CITENEL 2015, um artigo técnico 
-	em inglês submetido ao prêmio GDF Suez de inovação, e 6 publicações na imprensa: 
+O ganho econômico gerado pelo sistema ROSA pode ser estimado pela quantidade de
+falhas operacionais com \textit{stoplogs} que podem ser evitadas com a
+utilização diária do sistema na usina de Jirau. Durante um período de 2 anos,
+falhas envolvendo \textit{stoplogs} resultaram em uma perda de disponibilidade
+de produção (Aumento da Energia Disponível) de 37 dias. Cada turbina
+em Jirau produz 75MWh, considerando o preço da energia no mercado brasileiro de
+aproximadamente R\$186,00 por MWh, a prevenção dessas falhas resultariam em uma
+economia de R\$12.358.238,04 no período.
+
+O ganho de segurança do trabalho com a utilização do robô rosa pode ser estimado
+pela redução do número de intervenções com a utilização de mergulhadores
+necessárias. O risco desse tipo de intervenção é classificado pela HSE como
+elevado, uma vez que representa um risco real de perda de vidas humanas. Em
+2014, foi registrado um incidente na usina de Jirau relacionado a uma
+intervenção envolvendo a utilização de mergulhadores. Neste incidente, um
+mergulhado foi arrastado pela correnteza da turbina adjacente, a corda de
+segurança o segurou em um primeiro momento, porém o mesmo foi forçado a cortá-la
+pois a pressão não o permitia respirar. O mergulhador for arrastado, então,
+através do sistema rio abaixo, felizmente o acidente não acabou sendo fatal.
+
+Problemas relacionados a \textit{stoplogs} representaram, no total, nos últimos
+2 anos, em aproximadamente 25 dias de intervenções com mergulhadores. Desde
+então, a perda de produção é relacionada ao tempo necessário em mobilizar os
+mergulhadores, colocá-los na água e, finalmente, resolver o problema em si. O
+robô ROSA é um sistema de monitoramento e inspeção, que tem como objetivo
+em auxiliar o operador, afim de reduzir a ocorrência de falhas e evitar
+completamente ações que resultem em um agravamento das condições de operações
+após uma falha ter ocorrido. Considerando a lista de ocorrências envolvendo
+\textit{stoplogs}, anexada a este documento, a utilização do robô ROSA
+resultaria em uma redução de 75\% da exposição ao risco de acidentes. 
+
+O projeto, apesar de curta duração (16 meses), resultou em 3 teses de 
+mestrado, uma publicação técnica submetida ao CITENEL 2015, um artigo técnico 
+em inglês submetido ao prêmio GDF Suez de inovação, e 6 publicações na imprensa: 
  
 
 
