@@ -14,7 +14,6 @@ draft=false]{report}%openany,version=last
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-
 \pdfcompresslevel = 9
 \oddsidemargin = 31pt
 \topmargin = 20pt
@@ -38,16 +37,12 @@ draft=false]{report}%openany,version=last
     \rule{\textwidth}{2pt}
     \vspace{1ex}
     \centering
-    \huge \bfseries
+    \huge \textnormal
 } % before-code
 [
-\centering
 \vspace{-1ex}%
 \rule{\textwidth}{2pt}
-{\large \today}
-\newline
-\includegraphics{logo/rosa_logo.png}
-\vfill
+\vfill \includegraphics{logo/rosa_logo.png}
 ] % after-code
 
 \begin{document} 
@@ -60,7 +55,7 @@ draft=false]{report}%openany,version=last
 
 \chapter{Resumo de projeto}
 \include{chapter1}\addcontentsline{toc}{chapter}{Resumo de projeto}
-\include{resumo} 
+%\include{resumo}  
 
 \include{chapter2} 
 \includepdf[pages=-]{PDFs/citenel.pdf}
