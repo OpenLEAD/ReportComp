@@ -14,6 +14,34 @@ draft=false]{report}%openany,version=last
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
+\newcommand*{\fancychapterstyle}{%
+  \titleformat{\chapter} % command
+	[block] % shape
+	{\bfseries\Large\itshape} % format
+	{	\textsc{\LARGE Compilação de relatórios técnicos} 
+		\newline \newline  
+		\textsc{\Large Capítulo \ \thechapter}
+	} % label
+	{0.5ex} % sep
+	{
+    	\rule{\textwidth}{2pt}
+    	\vspace{1ex}
+    	\centering
+    	\huge \textnormal
+	} % before-code
+	[
+		\vspace{-1ex}%
+		\rule{\textwidth}{2pt}
+		\vfill \includegraphics{logo/rosa_logo.png}
+	] % after-code
+}
+
+\newcommand*{\standardchapterstyle}{%
+  \titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  \titlespacing*{\chapter}{0pt}{50pt}{40pt}
+}
+
 \pdfcompresslevel = 9
 \oddsidemargin = 31pt
 \topmargin = 20pt
@@ -26,24 +54,7 @@ draft=false]{report}%openany,version=last
 \footskip = 30pt
 \pagenumbering{gobble}
 
-\titleformat{\chapter} % command
-[block] % shape
-{\bfseries\Large\itshape} % format
-{	\textsc{\LARGE Compilação de relatórios técnicos} 
-	\newline \newline  
-	\textsc{\Large Capítulo \ \thechapter}} % label
-{0.5ex} % sep
-{
-    \rule{\textwidth}{2pt}
-    \vspace{1ex}
-    \centering
-    \huge \textnormal
-} % before-code
-[
-\vspace{-1ex}%
-\rule{\textwidth}{2pt}
-\vfill \includegraphics{logo/rosa_logo.png}
-] % after-code
+
 
 \begin{document} 
 
@@ -53,35 +64,36 @@ draft=false]{report}%openany,version=last
 
 \tableofcontents
 
+\fancychapterstyle
 \chapter{Resumo de projeto}
-\include{chapter1}\addcontentsline{toc}{chapter}{Resumo de projeto}
 %\include{resumo}  
 
-\include{chapter2} 
+\chapter{Artigo CITANEL} 
 \includepdf[pages=-]{PDFs/citenel.pdf}
 
 
-\include{chapter3}
+\chapter{Artigo GDF Suez Innovation}
 \includepdf[pages=-]{PDFs/GDF.pdf}
 
 %\section{Viagens}
 
 %\section{Publicações e imprensa}
 
-\include{chapter6}
+\chapter{Manual de usuário}
 \includepdf[pages=-]{PDFs/UserGuide.pdf}
 
 %\section{Projeto básico}
 
-\include{chapter8}
+\chapter{Relatório da elétrica e eletrônica}
 \includepdf[pages=3-]{PDFs/RelEle.pdf}
 
 %\section{Relatório usabilidade}
 
-%\section{Proposta de mestrado André}
+\chapter{Proposta de mestrado - André}
+\includepdf[pages=-]{PDFs/propostaAndre.pdf}
 
 %\section{Proposta de mestrado Gabriel}
 
 %\section{Proposta de mestrado Elael} 
-
+\standardchapterstyle
 \end{document}
