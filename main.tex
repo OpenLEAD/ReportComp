@@ -14,29 +14,7 @@ draft=false]{report}%openany,version=last
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{titletoc}
-\usepackage{etoolbox}
-\usepackage{lmodern}
-\usepackage{tikz}
-\usetikzlibrary{calc}
 
-\definecolor{myred}{RGB}{127,0,0}
-\definecolor{myyellow}{RGB}{169,121,69}
-\patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
-
-\renewenvironment{leftbar}
-  {\def\FrameCommand{\hspace{6em}%
-    {\color{myyellow}\vrule width 2pt depth 6pt}\hspace{1em}}%
-    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
-  }
- {\endMakeFramed}
- 
- \newcommand*{\fancysummary}{\titlecontents{chapter}
-  [0em]{\vspace*{2\baselineskip}}
-  {\parbox{4.5em}{%
-    \hfill\Huge\sffamily\bfseries\color{myred}\thecontentspage}%
-   \vspace*{-2.3\baselineskip}\leftbar\textsc{\small\chaptername~\thecontentslabel}\\\sffamily}
-  {}{\endleftbar}
-}
 
 \newcommand*{\fancychapterstyle}{%
   \titleformat{\chapter} % command
@@ -83,7 +61,7 @@ draft=false]{report}%openany,version=last
 
 \includepdf{capas/capa_main.pdf}
 \include{frontpage}
-%\fancysummary  
+
 \tableofcontents
 
 \fancychapterstyle
