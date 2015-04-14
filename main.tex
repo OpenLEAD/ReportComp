@@ -11,8 +11,32 @@ draft=false]{report}%openany,version=last
 \usepackage{pdfpages}
 \usepackage[toc,page]{appendix}
 \usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+\patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
+
+\renewenvironment{leftbar}
+  {\def\FrameCommand{\hspace{6em}%
+    {\color{myyellow}\vrule width 2pt depth 6pt}\hspace{1em}}%
+    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+  }
+ {\endMakeFramed}
+ 
+ \newcommand*{\fancysummary}{\titlecontents{chapter}
+  [0em]{\vspace*{2\baselineskip}}
+  {\parbox{4.5em}{%
+    \hfill\Huge\sffamily\bfseries\color{myred}\thecontentspage}%
+   \vspace*{-2.3\baselineskip}\leftbar\textsc{\small\chaptername~\thecontentslabel}\\\sffamily}
+  {}{\endleftbar}
+}
 
 \newcommand*{\fancychapterstyle}{%
   \titleformat{\chapter} % command
@@ -54,46 +78,103 @@ draft=false]{report}%openany,version=last
 \footskip = 30pt
 \pagenumbering{gobble}
 
-
-
 \begin{document} 
-
+ 
 
 \includepdf{capas/capa_main.pdf}
 \include{frontpage}
-
+%\fancysummary  
 \tableofcontents
 
 \fancychapterstyle
+
 \chapter{Resumo de projeto}
 %\include{resumo}  
 
 \chapter{Artigo CITANEL} 
-\includepdf[pages=-]{PDFs/citenel.pdf}
+\includepdf[pages=-,
+addtotoc={1,section,1,Introdução,introcitanel[,2,section,1,Descrição
+do Problema, problemacitenel[,3,section,1,Estado da
+arte,artecitenel[,3,section,1,Descrição do
+ROSA,rosacitenel[,4,section,1,Sistema embarcado
+submarino,embarcadocitenel[,6,section,1,Sistema de
+superfície,superficiecitenel[,7,section,1,Inspeção,inspecaocitenel[,10,section,1,Resultados,resultadoscitenel[,10,section,1,Benefícios,beneficioscitenel[,11,section,1,Conclusões,conclusaocitenel[,11,section,1,Referências
+bibliogáficas,refbibcitenel]]]]]]]]]}]{PDFs/citenel.pdf}
+
 
 
 \chapter{Artigo GDF Suez Innovation}
-\includepdf[pages=-]{PDFs/GDF.pdf}
+\includepdf[pages=-,
+addtotoc={1,section,1,Introduction,introgdf[,2,section,1,Problematic,
+problemagdf[,3,section,1,ROSA -
+Robot,rosagdf[,4,section,1,Experimental tests and
+results,resultadosgdf[,4,section,1,Conclusion
+and future
+work,conclusaogdf[,5,section,1,Team,teamgdf[,5,section,1,References,refgdf]]]]]}]{PDFs/GDF.pdf}
 
-%\section{Viagens}
+%\section{Viagens} 
 
 %\section{Publicações e imprensa}
 
 \chapter{Manual de usuário}
-\includepdf[pages=-]{PDFs/UserGuide.pdf}
+\includepdf[pages=-,
+addtotoc={3,section,1,Visão geral,geralmanual[,3,subsection,2,O Robô,
+robomanual[,5,subsection,2,Sensores,sensoresmanual[,6,section,1,Tipos de
+operação,operacaomanual[,7,section,1,Instalação
+mecânica,mecanicamanual[,8,subsection,2,Instalação da eletrôncia
+embarcada,embarcadamanual[,10,subsection,2,Instalação dos
+sensores,instsensoresmanual[,14,subsection,2,Instalação da eletrônica de
+superfície,supericiemanual[,15,subsection,2,Instalação cabos e
+conectores,conectoresmanual[,23,section,1,Inicialização,inicializacaomanual[,24,section,1,Aplicativo
+ROSA,aplicativomanual[,25,subsection,2,Linguagem do
+aplicativo,linguagemmanual[,26,subsection,2,Símbolos na
+interface,interfacemanual[,27,subsection,2,Widgets,widgetsmanual[,28,subsection,2,Reinicair
+ou debuggar,debugmanual[,29,section,1,Coniguração do software eletrônica
+embarcada e eletrônica de superfície,configmanual[,30,subsection,2,Display
+Top/Bottomside,displaymanual[,31,subsection,2,System
+GUI,guimanual[,33,section,1,Configuração do roteador
+WiFi,roteadormanual]]]]]]]]]]]]]]]]]}]{PDFs/UserGuide.pdf}
 
 %\section{Projeto básico}
 
+
 \chapter{Relatório da elétrica e eletrônica}
-\includepdf[pages=3-]{PDFs/RelEle.pdf}
+\includepdf[pages=3-, addtotoc={5,section,1,Propostas de soluções para a
+arquitetura da eletrônica do Projeto ROSA versão
+1,versao1ele[,6,section,1,Proposta 1 - Placa com Microcontrolador e Gateway
+Ethernet, prop1ele[,6,subsection,2,Arquitetura da Eletrônica Proposta 1 - versão
+1,prop1v1ele[,10,subsection,2,Arquitetura da Eletrônica Proposta 1 - versão
+2,prop1v2ele[,16,subsection,2,Arquitetura da Eletrônica Proposta 1 - versão 3,
+prop1v3ele[,19,subsection,2,Arquitetura de Software Proposta 1 - versão
+1,props1v1ele[,23,section,1,Proposta 2 - PC Embarcado e base com
+Roteador,prop2ele[,23,subsection,2,Arquitetura da Eletrônica Proposta
+2,prop2eleele[,24,subsection,2,Arquitetura de Software proposta
+2,prop2sofele[,27,section,1,Proposta 3 - PC embarcado e PC na
+base,prop3ele[,27,subsection,2,Arquitetura da Eletrônica Proposta
+3,prop3elele[,27,subsection,2,Arquitetura de Software Proposta 3,
+prop3softele[,33,section,1,Datasheets,dataele]]]]]]]]]]]}]{PDFs/RelEle.pdf}
 
 %\section{Relatório usabilidade}
 
+
 \chapter{Proposta de mestrado - André}
-\includepdf[pages=-]{PDFs/propostaAndre.pdf}
+\includepdf[pages=-,
+addtotoc={4,section,1,Introdução,introandre[,5,section,1,Motivação,
+motivacaoandre[,7,section,1,Objetivos,objetivoandre[,8,section,1,Metodologia e
+Resultados Esperados,resultadosandre[,10,section,1,Tópicos Propostos para
+Pesquisa,topicosandre[,11,subsection,2,Definição do Tipo de
+Bateria,deftipoandre[,11,subsection,2,Modelagem Matemática das
+Células,modandre[,12,subsection,2,Definição da Topologia de Conexão das Células,
+topologiaandre[,12,subsection,2,Estudo de Carregamento,
+carregamentoandre[,12,subsection,2,Estudo de Descarregamento,
+descarregamentoandre[,13,subsection,2,Estudo de
+Caso,casoandre[,14,section,1,Bibliograia
+Proposta,bibandre[,17,section,1,Cronograma
+Proposto,cronogramaandre[,18,section,1,Conclusão,conclusaoandre[,19,section,1,Referência
+Bibliográficas,refbibandre]]]]]]]]]]]]]}]{PDFs/propostaAndre.pdf}
 
 %\section{Proposta de mestrado Gabriel}
 
 %\section{Proposta de mestrado Elael} 
-\standardchapterstyle
+\standardchapterstyle   
 \end{document}
