@@ -15,6 +15,7 @@ draft=false]{report}%openany,version=last
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{titletoc}
+\usepackage{subcaption}
 
 \newcommand*{\fancychapterstyle}{%
   \titleformat{\chapter} % command
@@ -58,7 +59,7 @@ draft=false]{report}%openany,version=last
 
 \begin{document} 
  
-
+ 
 \includepdf{capas/capa_main.pdf}
 \include{frontpage}
 
@@ -115,6 +116,16 @@ Viagem de Fevereiro 2015,fevviagem}]{PDFs/04ViagemFevereiro2015.pdf}
 \includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
 Viagem de Fevereiro 2015,tecfevviagem}]{PDFs/04ViagemTecnicoFevereiro2015.pdf}
  
+ 
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+\chapter{Registros Fotográficos}
+\include{Nov2013}
+\include{solen}
+\include{LabOceano}
+\include{Jun2014}
+\include{Nov2014}
+\include{Jan2015}
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
 \chapter{Publicações e imprensa}
