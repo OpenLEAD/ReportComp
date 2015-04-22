@@ -1,7 +1,5 @@
 \documentclass[a4paper,11pt,oneside,brazilian,
 draft=false]{report}%openany,version=last
- 
- 
 
 \usepackage{float}
 \usepackage{rotating}
@@ -15,7 +13,8 @@ draft=false]{report}%openany,version=last
 \usepackage{xcolor}
 \usepackage{framed}
 \usepackage{titletoc}
-\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage[brazilian]{babel} 
 
 \newcommand*{\fancychapterstyle}{%
   \titleformat{\chapter} % command
@@ -44,7 +43,7 @@ draft=false]{report}%openany,version=last
   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
   \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 }
-
+ 
 \pdfcompresslevel = 9
 \oddsidemargin = 31pt
 \topmargin = 20pt
@@ -96,36 +95,41 @@ work,conclusaogdf[,5,section,1,Team,teamgdf[,5,section,1,References,refgdf]]]]]}
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
 \chapter{Relatórios de viagens} 
-\includepdf[pages=-,addtotoc={1,section,1,Relatório
-Viagem de Junho 2014,junhoviagem}]{PDFs/01ViagemJunho2014.pdf}
-\includepdf[pages=3-,addtotoc={3,section,1,Relatório Técnico
-Viagem de Junho 2014,tecjunhoviagem}]{PDFs/01ViagemTecnicoJunho2014.pdf}
 
-\includepdf[pages=-,addtotoc={1,section,1,Relatório
-Viagem de Novembro 2014,novviagem}]{PDFs/02ViagemNovembro2014.pdf}
-\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-Viagem de Novembro 2014,tecnovviagem}]{PDFs/02ViagemTecnicoNovembro2014.pdf}
+\include{Nov2013}
 
-\includepdf[pages=-,addtotoc={1,section,1,Relatório
-Viagem de Janeiro 2015,janviagem}]{PDFs/03ViagemJaneiro2015.pdf}
-\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-Viagem de Janeiro 2015,tecjanviagem}]{PDFs/03ViagemTecnicoJaneiro2015.pdf}
+\includepdf[pages=-,addtotoc={1,section,1,Viagem de Junho 2014,junhoviagem}]{PDFs/01ViagemJunho2014.pdf}
+\include{Jun2014}
+%\includepdf[pages=3-,addtotoc={3,section,1,Relatório Técnico
+%Viagem de Junho 2014,tecjunhoviagem}]{PDFs/01ViagemTecnicoJunho2014.pdf}
+
+\includepdf[pages=-,addtotoc={1,section,1, Viagem de Novembro
+2014,novviagem}]{PDFs/02ViagemNovembro2014.pdf}
+\include{Nov2014}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Novembro 2014,tecnovviagem}]{PDFs/02ViagemTecnicoNovembro2014.pdf} 
+
+\includepdf[pages=1,addtotoc={1,section,1,Viagem de Janeiro 2015,janviagem}]{PDFs/03ViagemJaneiro2015.pdf}
+\include{Jan2015}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Janeiro 2015,tecjanviagem}]{PDFs/03ViagemTecnicoJaneiro2015.pdf}
 
 \includepdf[pages=-,addtotoc={1,section,1,Relatório
 Viagem de Fevereiro 2015,fevviagem}]{PDFs/04ViagemFevereiro2015.pdf}
-\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-Viagem de Fevereiro 2015,tecfevviagem}]{PDFs/04ViagemTecnicoFevereiro2015.pdf}
+\include{Fev2015}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Fevereiro 2015,tecfevviagem}]{PDFs/04ViagemTecnicoFevereiro2015.pdf}
  
  
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
-\chapter{Registros Fotográficos}
-\include{Nov2013}
-\include{solen}
-\include{LabOceano}
-\include{Jun2014}
-\include{Nov2014}
-\include{Jan2015}
+%\chapter{Registros Fotográficos}
+%\include{Nov2013}
+%\include{solen}
+%\include{LabOceano}
+%\include{Jun2014}
+%\include{Nov2014}
+%\include{Jan2015}
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
 \chapter{Publicações e imprensa}
@@ -231,7 +235,8 @@ base,prop3ele[,27,subsection,2,Arquitetura da Eletrônica Proposta
 prop3softele[,33,section,1,Datasheets,dataele]]]]]]]]]]]}]{PDFs/RelEle.pdf}
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
-%\chapter{Relatório de usabilidade}
+\chapter{Relatório de usabilidade}
+\includepdf[pages=-]{PDFs/RelatorioUsabilidade.pdf}
 
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
@@ -263,7 +268,7 @@ Estimator,socandre[,8,section,1,Conclusion,conclusion2andre[,8,section,1,Referen
 
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
-%\section{Proposta de mestrado Gabriel}
+%\section{Proposta de mestrado Gabriel} 
 
 %\section{Proposta de mestrado Elael} 
 \standardchapterstyle   

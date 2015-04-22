@@ -246,7 +246,73 @@ entrega do equipamento, manual de uso e documentação de encerramento do projet
 
 \section{Planejamento}
 \includepdf{PDFs/Plano_Trabalho.pdf}
-\includepdf{PDFs/Det_Plano_Trabalho.pdf}
+
+\definecolor{Gray}{gray}{0.9}
+
+\begin{longtable}{ | l | p{4cm} | l | l | p{5cm} | }
+\hline
+    \rowcolor{Gray}
+	AP* & Descrição & Início & Dur &  \  \\ \hline
+	 & Projeto Basico & 1 & 4 & \ \\ \hline
+	1 & Viagem Inaugural & 1 & 1 &  Assinatura do termo inaugural do projeto e
+	análise em campo da problemática \\ \hline 
+	2 & Requisito & 1 & 2 & Neste pacote de trabalho os requisitos do sistema serao
+	especificados através de reunioes com a ESBR e análise em campo da operacao.    \\ \hline 
+	3 & Contextualização & 1 & 2 & Levantamento das tecnologias existentes para monitoramento e mapeamento de operacoes de Stoplog \\ \hline
+	4 & Definição do conceito & 2 & 3 & Definição de uma solução de um robô capaz
+	 de operar no ambiente e realizar tarefas de coating   \\ \hline 
+	5 & Análise do Usuário & 3 & 2 & Análise dos operadores de pórtico rolante que
+	 serao os usuários finais do sistema de monitoramento.  \\ \hline 
+	6 & Estudo dos \newline fornecedores & 4 & 1 & Definição dos fornecedores
+	de equipamento \\ \hline 
+	\rowcolor{Gray}
+	  & Detalhamento & 5 & 4 &  \  \\ \hline
+	7 & Design do Sistema & 5 & 3 & Processo de definicao da arquitetura,
+	componentes,,ódulos e interfaces que satisfazem os requisitos do sistema. \\
+	\hline 8 & Manufatura \newline e Aquisicao & 5 & 4 & Compra e construção dos
+	componentes definidos durante a fase de design do sistema. O resultado será as partes que integradas formarão o robô.  \\ \hline 9 & Octomap & 5 & 4
+	& Integracao da biblioteca de acumulacao volumétrica ao software de robótica do projeto \\ \hline 10 & Protótipo de Interface & 5 & 4 & Desenvolvimento de tela sinterativas
+	simples, concentrando apenas no desenvolvimento da parte visual da interface. \\ \hline 
+	11 & Drivers & 6 & 4 & Protocolos de comunicacao entre o computador embarcado e
+	os sensores comprados \\ \hline 
+	12 & Viajem Jirau - Teste de Sensor & 8 & 1 & Viagem a Jirau para teste simples dos sensores adiquiridos  \\ \hline
+	\rowcolor{Gray}
+	   & Execucao & 9 & 6 &  \\ \hline
+	13 & Modelagem do Sonar Profiling & 9 & 3 & Modelagem da resposta da potência
+	do ECO do sonar no mapa de acumulacao volumétrica Octomap.  \\ \hline 
+	14 & Reconstrucao 3D Simples & 9 & 1 & Vizualisacao 3D de uma acumulacao
+	volumétrica simples (cubo)  em Octomap  \\ \hline 
+	15 & Integracao Eletrônica & 9 & 4 & Montagem da eletrônica
+	embarcada \\ \hline 
+	16 & Interface de Usuario & 9 & 4 & Implementacao da interface de
+	usuário (GUI) do robo, aplicativo para applet Android \\ \hline 
+	17 & Localizacao & 10 & 2 & Algoritmo de localizacao das medicoes do
+	sonar com relacao ao vao do Stoplog \\ \hline 
+	18 & Modelagem de Sonar Imaging & 12 & 3 & Modelagem da resposta da
+	potência do ECO de sonar tipo imaging no mapa de acumulacao volumétrica Octomap. \\ \hline 
+	19 & Filtro de Partícula & 12 & 3 & Implementação do filtro
+	probabilítico  para filtrar as diverss medidas de sonares do meio com relacao a sua distribuicao de probabilidade. \\ \hline 
+	20 & Integracao Sistema & 12 & 2 & Integração electro-mecanica e de
+	 software do robô ROSA \\ \hline 
+	21 & Viajem Jirau - Teste de Sistema & 13 & 1 & Testes do protótipo em
+	Jirau \\ \hline
+	\rowcolor{Gray}
+	 & Encerramento & 15 & 2 & \  \\ \hline
+	22 & Tuning & 15 & 2 & Ajustes finos dos resultados da pesquisa
+	baseado nos testes de campo \\ \hline 
+	23 & Viajem Jirau - Teste de Sistema & 15 & 1 & Viagem a Jirau para testes
+	do sistema \\ \hline 
+	24 & Workshop Troca Conhecimento & 16 & 1 & Viagem a Jirau para treinar a
+	equipe na utilizacao do protótipo e realizacao do workshop de transferencia de conhecimento.  \\ \hline 
+	\rowcolor{Gray}
+	   & Marcos &  &  &  \  \\ \hline
+	M1 & Projeto Básico & 4 & 1 &  \  \\ \hline
+	M2 & Design do Sistema & 9 & 1 & \  \\ \hline
+	M3 & Demonstracao do Sistema & 13 & 1   & \  \\ \hline
+	M4 & Relatório \newline Encerramento & 16 & 1   & \  \\ \hline
+\end{longtable}
+
+
 
 \section{Financeiro}
 \begin{center}
@@ -264,6 +330,8 @@ entrega do equipamento, manual de uso e documentação de encerramento do projet
 \end{center}
  
 
-
+\standardchapterstyle
 \bibliographystyle{ieeetr}
 \bibliography{resumo}
+
+\fancychapterstyle
