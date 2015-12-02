@@ -1,36 +1,20 @@
-%TODO
-\section{Contextualização}
-Visando um aumento na segurança e otimização das operações realizadas na usina 
-hidrelétrica de Jirau (3,750 MW Brasil), a ESBR estabelceu uma parceria com a 
-Universidade Federal do Rio de Janeiro para o desenvolvimento de um projeto de 
-inovação: o robô submarino ROSA para monitoramento e inspeção das operações com
-\textit{stoplogs}. O projeto ROSA teve início em Novembro de 2013 e término em
-Fevereiro de 2015, totalizando um investimento de R\$ 2.8 milhões.
+\section{Introdução}
+Este é o Relatório Final do projeto intitulado ROBÔ PARA OPERAÇÃO DE STOPLOGS
+ALAGADOS – ROSA. Este relatório tem o objetivo de cumprir as determinações da
+ANEEL - Agência Nacional de Energia Elétrica e também de ser um resumo
+executivo do projeto.
 
-\textit{Stoplogs} são barreiras metálicas modulares que são empilhadas na
-entrada e sáida de cada tubina, permitindo o vedamento e a drenagem da
-região para manutenção. Em Jirau, cada \textit{stoplog} possui massa de duas
-toneladas e é necessário empilhar oito em cada extremidade da turbina para o seu
-vedamento.
+O projeto foi desenvolvido entre a Energia Sustentável do Brasil S.A. e o
+Laboratório de Controle e Automação - LEAD, Engenharia de Aplicação e
+Desenvolvimento, dentro do Programa de Pesquisa e Desenvolvimento Tecnológico
+dessa empresa, no ano base de 2013, conforme regras vigentes da ANEEL, tendo
+duração 18 meses.
 
-Um operador instala e remove os \textit{stoplogs}, utilizando um pórtico
-rolante e uma viga pescadora. Quando a viga pescadora está submersa, a tensão
-do cabo que a sustenta é a única informação disponível ao operador. Essas
-operações às cegas resulta, ocasionalmente, em falhas causadas por
-influências mecânicas ou ambientais. Alguns exemplos são:
+O presente projeto de pesquisa e desenvolvimento visou desenvolver um protótipo
+de sistema robótico visando o monitoramento da operação de inserção e remoção
+de stoplogs nas usinas hidrelétricas.
 
-\begin{itemize}
-\item \textit{Acoplamento incompleto}. Viga pescadora acopla apenas um dos
-olhais do \textit{stoplog}, resultando em uma movimentação inclinada e danificando a estrutura;
-\item \textit{Detritos e sedimentos}. Acúmulo de detritos na soleira,
-acarretando em vedação imperfeita e, consequentemente, impossibilitando uma
-drenagem efetiva.
-\end{itemize}
-
-Falhas na operação podem ser resolvidas somente por meio da intervenção de
-mergulhadores. Entretanto, o fluxo das turbinas adjacentes em operação e o
-turbilhamento do rio podem ocasionar em acidentes, tornando essa medida uma 
-tarefa de alto risco à vida dos mergulhadores.
+Este relatório está dividido conforme segue.
 
 \section{Revisão Bibiliográfica}
 
@@ -61,6 +45,41 @@ sensores. Não foi encontrado, também, nenhum trabalho anterior referenciando a
 utilização de sonares para a inspeção do vão com os trilhos guia e da soleira da
 entrada e saída da turbina.
 
+
+\section{Justificativa do desenvolvimento do projeto}
+Visando um aumento na segurança e otimização das operações realizadas na usina 
+hidrelétrica de Jirau (3,750 MW Brasil), a Energia sustentável do Brasil (ESBR)
+estabelceu uma parceria com a Universidade Federal do Rio de Janeiro para o desenvolvimento de um projeto de 
+inovação: o robô submarino ROSA para monitoramento e inspeção das operações com
+\textit{stoplogs}. O projeto ROSA teve início em Novembro de 2013 e término em
+Fevereiro de 2015, totalizando um investimento de R\$ 2.8 milhões.
+
+\textit{Stoplogs} são barreiras metálicas modulares que são empilhadas na
+entrada e sáida de cada tubina, permitindo o vedamento e a drenagem da
+região para manutenção. Em Jirau, cada \textit{stoplog} possui massa de duas
+toneladas e é necessário empilhar oito em cada extremidade da turbina para o seu
+vedamento.
+
+Um operador instala e remove os \textit{stoplogs}, utilizando um pórtico
+rolante e uma viga pescadora. Quando a viga pescadora está submersa, a tensão
+do cabo que a sustenta é a única informação disponível ao operador. Essas
+operações às cegas resulta, ocasionalmente, em falhas causadas por
+influências mecânicas ou ambientais. Alguns exemplos são:
+
+\begin{itemize}
+\item \textit{Acoplamento incompleto}. Viga pescadora acopla apenas um dos
+olhais do \textit{stoplog}, resultando em uma movimentação inclinada e danificando a estrutura;
+\item \textit{Detritos e sedimentos}. Acúmulo de detritos na soleira,
+acarretando em vedação imperfeita e, consequentemente, impossibilitando uma
+drenagem efetiva.
+\end{itemize}
+
+Falhas na operação podem ser resolvidas somente por meio da intervenção de
+mergulhadores. Entretanto, o fluxo das turbinas adjacentes em operação e o
+turbilhamento do rio podem ocasionar em acidentes, tornando essa medida uma 
+tarefa de alto risco à vida dos mergulhadores.
+
+
 \section{Aspecto inovador do projeto}
 
 O desenvolvimento de um sistema robótico submarino capaz de mapear e monitorar
@@ -69,7 +88,7 @@ redução das paradas na produção, e o aumento da segurança da operação,
 pela redução da necessidade da intervenção de mergulhadores, motivam o
 desenvolvimento da solução.
 
-\section{Descrição da inovação}
+\section{Descrição da inovação - Originalidade}
 
 O robô de monitoramento e mapeamento submarino, ROSA, é projetado para evitar a
 maioria dos problemas relacionados às operações com \textit{stoplogs}. O sistema
@@ -106,12 +125,14 @@ um sistema de \textit{stoplogs} baseado em pórtico rolante e viga pescadora.
 \section{Aplicabilidade}
 
 O resultado final do projeto foi um protótipo consistindo de: uma unidade de
-superfície à prova d'água, certificada com IP68, capaz de suportar umidade e
-altas temperaturas; e uma unidade submarina, certificada com IP69K, capaz de
-suportar até 100 bar. Atualmente, o sistema está instalado e sendo
-utilizado na usina de Jirau.
+superfície à prova d'água, certificada com IP68 (nível de classes de proteção,
+padrão internacional definido pela norma IEC 60529 para classificar e avaliar
+o grau de proteção de produtos fornecidos contra intrusão), capaz de suportar
+umidade e altas temperaturas; e uma unidade submarina, certificada com IP69K,
+capaz de suportar até 100 bar. Atualmente, o sistema está instalado e sendo
+utilizado na Usina Jirau.
 
-O protótipo foi demonstrado para os representantes das usinas de Jirau e Santo
+O protótipo foi demonstrado para os representantes das Usina Jirau e Santo
 Antônio em uma operação real com \textit{stoplogs}. A tarefa de monitoramento
 foi realizada com sucesso, indicando todos os passos de uma operação e emitindo
 alarmes para as falhas detectadas. O mapeamento também foi bem sucedido,
@@ -129,7 +150,7 @@ paredes de concreto.
 
 O ganho econômico gerado pelo sistema ROSA pode ser estimado pela quantidade de
 falhas operacionais com \textit{stoplogs} que podem ser evitadas com a
-utilização diária do sistema na usina de Jirau. Durante um período de 2 anos,
+utilização diária do sistema na Usina Jirau. Durante um período de 2 anos,
 esse tipo de falha resultou em uma perda de disponibilidade de produção (Aumento
 da Energia Disponível) de 37 dias. Considerando que cada turbina em Jirau produz
 75 MWh e o preço da energia no mercado brasileiro ser aproximadamente R\$186,00
@@ -138,14 +159,11 @@ R\$12.358.238,04, no período.
 
 O ganho de segurança do trabalho com a utilização do robô ROSA pode ser estimado
 pela redução do número de intervenções necessárias com a utilização de
-mergulhadores. O risco desse tipo de intervenção é classificado pela HSE como
-elevado, uma vez que representa um risco real de perda de vidas humanas. Em
-2014, foi registrado um incidente na usina de Jirau relacionado a uma
-intervenção envolvendo a utilização de mergulhadores. Neste incidente, um
-mergulhador foi arrastado pela correnteza da turbina adjacente e a corda de
-segurança o segurou em um primeiro momento, porém o mesmo foi forçado a cortá-la
-pois a pressão não o permitia respirar. O mergulhador foi arrastado pelo rio,
-mas felizmente o acidente não foi fatal.
+mergulhadores. O risco desse tipo de intervenção é classificado pela HSE
+(\textit{Health Security and Environment} - Saúde, Segurança e Ambiente) como
+elevado, uma vez que representa um risco real de perda de vidas humanas. Desde
+2014, são registrados incidentes em usinas hidrelétricas relacionados a
+intervenção envolvendo a utilização de mergulhadores. 
 
 Nos últimos dois anos, os problemas relacionados a \textit{stoplogs}
 resultaram em 25 dias de intervenções com mergulhadores. A perda de
@@ -158,7 +176,7 @@ ocorrido. Considerando a lista de ocorrências envolvendo \textit{stoplogs}
 abaixo, a utilização do robô ROSA resultaria em uma redução de 75\% da
 exposição ao risco de acidentes.
 
-\textbf{Falhas}:
+Seguem algumas falhas registradas:S
 \begin{enumerate}
 \item Não ensecamento de UG devido a detritos na soleira e guia lateral:
 \begin{itemize}
@@ -244,6 +262,27 @@ etapa, o sistema é aprimorado e testado recursivamente e o conhecimento de uso 
 operação do mesmo é transferido. Por fim, a última etapa do projeto consiste na
 entrega do equipamento, manual de uso e documentação de encerramento do projeto.
 
+\section{Objetivos geral e específico}
+
+O objetivo do projeto ROSA é reduzir o tempo de parada de máquina em razão da
+vedação do circuito hidráulico. Uma solução para monitoramento de stoplog que
+possibilite identificar problemas como o emperramento no trilho, falhas na
+pesca do stoplog e mal assentamento, em geral causado pelo acúmulo de silte
+(fragmento de mineral ou rocha menor do que areia fina e maior do que argila).
+
+Para atingir esse objetivo o sistema proposto deveria ser capaz de realizar as
+seguintes tarefas:
+
+\begin{itemize}
+	\item Monitorar os engates das garras da viga pescadora nos olhais do stoplog;
+	\item Monitorar a inclinação da viga pescadora;
+	\item Monitorar a profundidade em que se encontra o stoplog;
+	\item Escanear a soleira com sonar para identificar a presença de silte e 
+	detritos; 
+	\item Montar uma interface para leitura amigável dos dados e interação com os
+	sistema.
+\end{itemize}
+
 \section{Planejamento}
 \includepdf{PDFs/Plano_Trabalho.pdf}
 
@@ -271,11 +310,13 @@ entrega do equipamento, manual de uso e documentação de encerramento do projet
 	componentes,,ódulos e interfaces que satisfazem os requisitos do sistema. \\
 	\hline 8 & Manufatura \newline e Aquisicao & 5 & 4 & Compra e construção dos
 	componentes definidos durante a fase de design do sistema. O resultado será as partes que integradas formarão o robô.  \\ \hline 9 & Octomap & 5 & 4
-	& Integracao da biblioteca de acumulacao volumétrica ao software de robótica do projeto \\ \hline 10 & Protótipo de Interface & 5 & 4 & Desenvolvimento de tela sinterativas
-	simples, concentrando apenas no desenvolvimento da parte visual da interface. \\ \hline 
-	11 & Drivers & 6 & 4 & Protocolos de comunicacao entre o computador embarcado e
-	os sensores comprados \\ \hline 
-	12 & Viajem Jirau - Teste de Sensor & 8 & 1 & Viagem a Jirau para teste simples dos sensores adiquiridos  \\ \hline
+	& Integracao da biblioteca de acumulacao volumétrica ao software de robótica
+	do projeto \\ \hline 10 & Protótipo de Interface & 5 & 4 & Desenvolvimento de
+	tela sinterativas simples, concentrando apenas no desenvolvimento da parte
+	visual da interface. \\ \hline 11 & Drivers & 6 & 4 & Protocolos de
+	comunicacao entre o computador embarcado e os sensores comprados \\ \hline 12
+	& Viajem Jirau - Teste de Sensor & 8 & 1 & Viagem a Jirau para teste simples
+	dos sensores adiquiridos  \\ \hline
 	\rowcolor{Gray}
 	   & Execucao & 9 & 6 &  \\ \hline
 	13 & Modelagem do Sonar Profiling & 9 & 3 & Modelagem da resposta da potência
@@ -314,20 +355,24 @@ entrega do equipamento, manual de uso e documentação de encerramento do projet
 
 
 
-\section{Financeiro}
-\begin{center}
-  \begin{tabular}{ | c | c | c | c | p{4.9cm} | }
-    \hline
-        \textbf{Rúbrica} & \textbf{Valor Previsto (R\$)} & \textbf{Valor Realizado (R\$)} & \textbf{Devio (\%)} & \textbf{Justificativa para os desvios positivos} \\ \hline
-    RH & 1.207.409,64 & 975.288,71 & 95\%  &  \\ \hline
-    MC & 2500,00      & 11.314,90  & 453\% &  Custo foi subestimado na estimativa  inicial dos componentes para construção do protótipo \\ \hline
-    MP & 1.972.875,00 & 987.282,99 & 50\%  &  \\ \hline
-    ST & 700.000,00   & 433.904,15 & 62\%  &  \\ \hline
-    VD & 158.160,00   & 95.871,00  & 61\%  &  \\ \hline
-    OU & 503.273,14   & 376.338,75 & 75\%  &  \\ 
-    \hline
-  \end{tabular}
-\end{center}
+% \section{Financeiro}
+% \begin{center}
+%   \begin{tabular}{ | c | c | c | c | p{4.9cm} | }
+%     \hline
+%         \textbf{Rúbrica} & \textbf{Valor Previsto (R\$)} & \textbf{Valor Realizado (R\$)} & \textbf{Devio (\%)} & \textbf{Justificativa para os desvios positivos} \\ \hline
+%     RH & 1.207.409,64 & 975.288,71 & 95\%  &  \\ \hline
+%     MC & 2500,00      & 11.314,90  & 453\% &  Custo foi subestimado na estimativa  inicial dos componentes para construção do protótipo \\ \hline
+%     MP & 1.972.875,00 & 987.282,99 & 50\%  &  \\ \hline
+%     ST & 700.000,00   & 433.904,15 & 62\%  &  \\ \hline
+%     VD & 158.160,00   & 95.871,00  & 61\%  &  \\ \hline
+%     OU & 503.273,14   & 376.338,75 & 75\%  &  \\ 
+%     \hline
+%   \end{tabular}
+% \end{center} 
+ 
+\section{Justificativa das alterações das informações relacionadas ao projeto
+base do XML inicial e a composição do XML final}
+\input{justificativaXML}
  
 
 \standardchapterstyle
