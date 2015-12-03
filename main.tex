@@ -15,6 +15,8 @@ draft=false]{report}%openany,version=last
 \usepackage{titletoc}
 \usepackage{longtable}
 \usepackage[brazilian]{babel} 
+\usepackage{movie15}
+\usepackage{hyperref}
 
 \newcommand*{\fancychapterstyle}{%
   \titleformat{\chapter} % command
@@ -71,54 +73,9 @@ draft=false]{report}%openany,version=last
 
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
-\chapter{Artigo CITENEL} 
-\includepdf[pages=-,
-addtotoc={1,section,1,Introdução,introcitanel[,2,section,1,Descrição
-do Problema, problemacitenel[,3,section,1,Estado da
-arte,artecitenel[,3,section,1,Descrição do
-ROSA,rosacitenel[,4,section,1,Sistema embarcado
-submarino,embarcadocitenel[,6,section,1,Sistema de
-superfície,superficiecitenel[,7,section,1,Inspeção,inspecaocitenel[,10,section,1,Resultados,resultadoscitenel[,10,section,1,Benefícios,beneficioscitenel[,11,section,1,Conclusões,conclusaocitenel[,11,section,1,Referências
-bibliogáficas,refbibcitenel]]]]]]]]]}]{PDFs/citenel.pdf}
-% ---------------------------------------------------------------------------
-% ---------------------------------------------------------------------------
 
-\chapter{Artigo GDF Suez Innovation}
-\includepdf[pages=-,
-addtotoc={1,section,1,Introduction,introgdf[,2,section,1,Problematic,
-problemagdf[,3,section,1,ROSA -
-Robot,rosagdf[,4,section,1,Experimental tests and
-results,resultadosgdf[,4,section,1,Conclusion
-and future
-work,conclusaogdf[,5,section,1,Team,teamgdf[,5,section,1,References,refgdf]]]]]}]{PDFs/GDF.pdf}
 
-% ---------------------------------------------------------------------------
-% ---------------------------------------------------------------------------
-\chapter{Relatórios de viagens} 
 
-\include{Nov2013}
-
-\includepdf[pages=-,addtotoc={1,section,1,Viagem de Junho 2014,junhoviagem}]{PDFs/01ViagemJunho2014.pdf}
-\include{Jun2014}
-%\includepdf[pages=3-,addtotoc={3,section,1,Relatório Técnico
-%Viagem de Junho 2014,tecjunhoviagem}]{PDFs/01ViagemTecnicoJunho2014.pdf}
-
-\includepdf[pages=-,addtotoc={1,section,1, Viagem de Novembro
-2014,novviagem}]{PDFs/02ViagemNovembro2014.pdf}
-\include{Nov2014}
-%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-%Viagem de Novembro 2014,tecnovviagem}]{PDFs/02ViagemTecnicoNovembro2014.pdf} 
-
-\includepdf[pages=1,addtotoc={1,section,1,Viagem de Janeiro 2015,janviagem}]{PDFs/03ViagemJaneiro2015.pdf}
-\include{Jan2015}
-%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-%Viagem de Janeiro 2015,tecjanviagem}]{PDFs/03ViagemTecnicoJaneiro2015.pdf}
-
-\includepdf[pages=-,addtotoc={1,section,1,Relatório
-Viagem de Fevereiro 2015,fevviagem}]{PDFs/04ViagemFevereiro2015.pdf}
-\include{Fev2015}
-%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
-%Viagem de Fevereiro 2015,tecfevviagem}]{PDFs/04ViagemTecnicoFevereiro2015.pdf}
  
  
 % ---------------------------------------------------------------------------
@@ -130,38 +87,8 @@ Viagem de Fevereiro 2015,fevviagem}]{PDFs/04ViagemFevereiro2015.pdf}
 %\include{Jun2014}
 %\include{Nov2014}
 %\include{Jan2015}
-% ---------------------------------------------------------------------------
-% ---------------------------------------------------------------------------
-\chapter{Publicações e imprensa}
-\includepdf[pages=-,addtotoc={1,section,1,Publicação no
-Jornal de Jirau 01,jirau01pub}]{PDFs/01PubJirau.pdf}
-\includepdf[pages=-,addtotoc={1,section,1,Publicação no
-Jornal de Jirau 02,jirau02pub}]{PDFs/02PubJirau2.pdf}
-\includepdf[pages=-,addtotoc={1,section,1,Publicação no
-Planeta COPPE,coppepub}]{PDFs/03PubPlanetaCOPPE.pdf}
-\includepdf[pages=1-3,addtotoc={1,section,1,Publicação no
-Diário de Porto Velho,rondpub}]{PDFs/04PubRondonia.pdf}
 
-% ---------------------------------------------------------------------------
-% ---------------------------------------------------------------------------
-\chapter{Manual de usuário}
-\includepdf[pages=-,
-addtotoc={3,section,1,Visão geral,geralmanual[,3,subsection,2,O Robô,
-robomanual[,5,subsection,2,Sensores,sensoresmanual[,6,section,1,Tipos de
-operação,operacaomanual[,7,section,1,Instalação
-mecânica,mecanicamanual[,8,subsection,2,Instalação da eletrôncia
-embarcada,embarcadamanual[,10,subsection,2,Instalação dos
-sensores,instsensoresmanual[,14,subsection,2,Instalação da eletrônica de
-superfície,supericiemanual[,15,subsection,2,Instalação cabos e
-conectores,conectoresmanual[,23,section,1,Inicialização,inicializacaomanual[,24,section,1,Aplicativo
-ROSA,aplicativomanual[,25,subsection,2,Linguagem do
-aplicativo,linguagemmanual[,26,subsection,2,Símbolos na
-interface,interfacemanual[,27,subsection,2,Widgets,widgetsmanual[,28,subsection,2,Reinicair
-ou debuggar,debugmanual[,29,section,1,Coniguração do software eletrônica
-embarcada e eletrônica de superfície,configmanual[,30,subsection,2,Display
-Top/Bottomside,displaymanual[,31,subsection,2,System
-GUI,guimanual[,33,section,1,Configuração do roteador
-WiFi,roteadormanual]]]]]]]]]]]]]]]]]}]{PDFs/UserGuide.pdf}
+
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
 
@@ -218,6 +145,24 @@ solução,fluxrelgel]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}]{PDFs/RelGe
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
 
+\chapter{Acompanhamentos e testes}
+\include{acompetestes}
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+
+\chapter{Melhorias de processos}\label{chap::melpro}
+\include{melhoriasdeprocessos}
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+
+\chapter{Melhorias introduzidas nos equipamentos}
+\include{melhoriasdeequipamentos}
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+
 \chapter{Relatório da elétrica e eletrônica}
 \includepdf[pages=3-, addtotoc={5,section,1,Propostas de soluções para a
 arquitetura da eletrônica do Projeto ROSA versão
@@ -240,6 +185,56 @@ prop3softele[,33,section,1,Datasheets,dataele]]]]]]]]]]]}]{PDFs/RelEle.pdf}
 
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
+\chapter{Relatórios de viagens} 
+
+\include{Nov2013}
+
+\includepdf[pages=-,addtotoc={1,section,1,Viagem de Junho 2014,junhoviagem}]{PDFs/01ViagemJunho2014.pdf}
+\include{Jun2014}
+%\includepdf[pages=3-,addtotoc={3,section,1,Relatório Técnico
+%Viagem de Junho 2014,tecjunhoviagem}]{PDFs/01ViagemTecnicoJunho2014.pdf}
+
+\includepdf[pages=-,addtotoc={1,section,1, Viagem de Novembro
+2014,novviagem}]{PDFs/02ViagemNovembro2014.pdf}
+\include{Nov2014}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Novembro 2014,tecnovviagem}]{PDFs/02ViagemTecnicoNovembro2014.pdf} 
+
+\includepdf[pages=1,addtotoc={1,section,1,Viagem de Janeiro 2015,janviagem}]{PDFs/03ViagemJaneiro2015.pdf}
+\include{Jan2015}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Janeiro 2015,tecjanviagem}]{PDFs/03ViagemTecnicoJaneiro2015.pdf}
+
+\includepdf[pages=-,addtotoc={1,section,1,Relatório
+Viagem de Fevereiro 2015,fevviagem}]{PDFs/04ViagemFevereiro2015.pdf}
+\include{Fev2015}
+%\includepdf[pages=-,addtotoc={1,section,1,Relatório Técnico
+%Viagem de Fevereiro 2015,tecfevviagem}]{PDFs/04ViagemTecnicoFevereiro2015.pdf}
+
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+\chapter{Manual de usuário}
+\includepdf[pages=-,
+addtotoc={3,section,1,Visão geral,geralmanual[,3,subsection,2,O Robô,
+robomanual[,5,subsection,2,Sensores,sensoresmanual[,6,section,1,Tipos de
+operação,operacaomanual[,7,section,1,Instalação
+mecânica,mecanicamanual[,8,subsection,2,Instalação da eletrôncia
+embarcada,embarcadamanual[,10,subsection,2,Instalação dos
+sensores,instsensoresmanual[,14,subsection,2,Instalação da eletrônica de
+superfície,supericiemanual[,15,subsection,2,Instalação cabos e
+conectores,conectoresmanual[,23,section,1,Inicialização,inicializacaomanual[,24,section,1,Aplicativo
+ROSA,aplicativomanual[,25,subsection,2,Linguagem do
+aplicativo,linguagemmanual[,26,subsection,2,Símbolos na
+interface,interfacemanual[,27,subsection,2,Widgets,widgetsmanual[,28,subsection,2,Reinicair
+ou debuggar,debugmanual[,29,section,1,Coniguração do software eletrônica
+embarcada e eletrônica de superfície,configmanual[,30,subsection,2,Display
+Top/Bottomside,displaymanual[,31,subsection,2,System
+GUI,guimanual[,33,section,1,Configuração do roteador
+WiFi,roteadormanual]]]]]]]]]]]]]]]]]}]{PDFs/UserGuide.pdf}
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
 \chapter{Proposta de mestrado - André} 
 \includepdf[pages=-,
 addtotoc={4,section,1,Introdução,introandre[,5,section,1,Motivação,
@@ -255,7 +250,7 @@ Caso,casoandre[,14,section,1,Bibliograia
 Proposta,bibandre[,17,section,1,Cronograma
 Proposto,cronogramaandre[,18,section,1,Conclusão,conclusaoandre[,19,section,1,Referência
 Bibliográficas,refbibandre]]]]]]]]]]]]]}]{PDFs/propostaAndre.pdf}
-% ---------------------------------------------------------------------------
+% --------------------------------------------------------------------------- 
 % ---------------------------------------------------------------------------
 \chapter{Artigo State of Charge Estimation and Battery Balancing Control -
 André} 
@@ -268,15 +263,57 @@ Estimator,socandre[,8,section,1,Conclusion,conclusion2andre[,8,section,1,Referen
 
 % ---------------------------------------------------------------------------
 % ---------------------------------------------------------------------------
+\chapter{Artigo CITENEL} 
+\includepdf[pages=-,
+addtotoc={1,section,1,Introdução,introcitanel[,2,section,1,Descrição
+do Problema, problemacitenel[,3,section,1,Estado da
+arte,artecitenel[,3,section,1,Descrição do
+ROSA,rosacitenel[,4,section,1,Sistema embarcado
+submarino,embarcadocitenel[,6,section,1,Sistema de
+superfície,superficiecitenel[,7,section,1,Inspeção,inspecaocitenel[,10,section,1,Resultados,resultadoscitenel[,10,section,1,Benefícios,beneficioscitenel[,11,section,1,Conclusões,conclusaocitenel[,11,section,1,Referências
+bibliogáficas,refbibcitenel]]]]]]]]]}]{PDFs/citenel.pdf}
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+
+\chapter{Artigo GDF Suez Innovation}
+\includepdf[pages=-,
+addtotoc={1,section,1,Introduction,introgdf[,2,section,1,Problematic,
+problemagdf[,3,section,1,ROSA -
+Robot,rosagdf[,4,section,1,Experimental tests and
+results,resultadosgdf[,4,section,1,Conclusion
+and future
+work,conclusaogdf[,5,section,1,Team,teamgdf[,5,section,1,References,refgdf]]]]]}]{PDFs/GDF.pdf}
+ 
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+
+%\section{Proposta de mestrado Gabriel} 
+
+%\section{Proposta de mestrado Elael}  
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
+\chapter{Publicações e imprensa}
+\includepdf[pages=-,addtotoc={1,section,1,Publicação no
+Jornal de Jirau 01,jirau01pub}]{PDFs/01PubJirau.pdf}
+\includepdf[pages=-,addtotoc={1,section,1,Publicação no
+Jornal de Jirau 02,jirau02pub}]{PDFs/02PubJirau2.pdf}
+\includepdf[pages=-,addtotoc={1,section,1,Publicação no
+Planeta COPPE,coppepub}]{PDFs/03PubPlanetaCOPPE.pdf}
+\includepdf[pages=1-3,addtotoc={1,section,1,Publicação no
+Diário de Porto Velho,rondpub}]{PDFs/04PubRondonia.pdf}
+
+\section{Vídeo conceito projeto ROSA}
+Disponível em \href{https://youtu.be/Cw6f-8JNUK0}{Youtube}.
+
+
+\section{Vídeo promocional projeto ROSA} 
+
+% ---------------------------------------------------------------------------
+% ---------------------------------------------------------------------------
 %\chapter{Justificativa das alterações das informações relacionadas ao projeto
 %base do XML inicial e a composição do XML final}
 %\include{justificativaXML}
 
-
-% ---------------------------------------------------------------------------
-% ---------------------------------------------------------------------------
-%\section{Proposta de mestrado Gabriel} 
-
-%\section{Proposta de mestrado Elael} 
 \standardchapterstyle   
 \end{document}
